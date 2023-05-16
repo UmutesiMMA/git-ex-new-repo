@@ -84,9 +84,14 @@ user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
 $ git switch -c dev
 Switched to a new branch 'dev'
 
-user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (dev)
+ user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (dev)
 $ git push origin dev
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 5.00 MiB | 682.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 remote:
 remote: Create a pull request for 'dev' on GitHub by visiting:
 remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/d
@@ -95,5 +100,32 @@ remote:
 To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
  * [new branch]      dev -> dev
 
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (dev)
+$ git switch -c test
+Switched to a new branch 'test'
 
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (test)
+$ git push origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/t
+est
+remote:
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ * [new branch]      test -> test
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (test)
+$ git switch dev
+Switched to branch 'dev'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (dev)
+$ git branch -d test
+Deleted branch test (was d1e51b8).
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (dev)
+$ git push origin --delete test
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ - [deleted]         test
 ```
+
