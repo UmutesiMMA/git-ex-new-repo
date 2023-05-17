@@ -248,6 +248,43 @@ To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
 
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
 $
+```
+## Bundle 2
+### Exercise 1
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (main)
+$ git switch -c ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
 
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
+$ touch service.html
 
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
+$ git add service.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
+$ git commit -m "Service page"
+[ft/bundle-2 fac79a3] Service page
+ 1 file changed, 18 insertions(+)
+ create mode 100644 service.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 4.53 KiB | 356.00 KiB/s, done.
+Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/f
+t/bundle-2
+remote:
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
+$
 ```
