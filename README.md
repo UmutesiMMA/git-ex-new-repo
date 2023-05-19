@@ -288,3 +288,234 @@ To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
 $
 ```
+### Exercise 2
+```bash
+
+b2/e2
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/service-redesign)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/service-redesign)
+$ git commit -m "new changes in service redesign branch"
+[ft/service-redesign dff22e4] new changes in service redesign branch
+ 1 file changed, 20 insertions(+)
+ create mode 100644 service.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 563 bytes | 187.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/f
+t/service-redesign
+remote:
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/bundle-2)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ ls
+README.md   feedback.txt  lamp.jpeg  start.html  story.html
+about.html  home.html     notes.txt  step.jpeg   trees-lamp.jpeg
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git pull
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 3.26 KiB | 37.00 KiB/s, done.
+From https://github.com/UmutesiMMA/The-gym-git-exercise-solutions
+   d63f8d9..de9b1d9  main                 -> origin/main
+ * [new branch]      revert-3-ft/bundle-2 -> origin/revert-3-ft/bundle-2
+Updating d63f8d9..de9b1d9
+Fast-forward
+ README.md    | 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ service.html | 18 ++++++++++++++
+ 2 files changed, 96 insertions(+)
+ create mode 100644 service.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ ls
+README.md   feedback.txt  lamp.jpeg  service.html  step.jpeg   trees-lamp.jpeg
+about.html  home.html     notes.txt  start.html    story.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git commit -m "changes on same line different branches"
+[main 3c7d551] changes on same line different branches
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 120.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+   de9b1d9..3c7d551  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
+$ git diff ft/service-redesign main
+diff --git a/README.md b/README.md
+index c510bc8..34c5cea 100644
+--- a/README.md
++++ b/README.md
+@@ -207,6 +207,84 @@ $ git commit -m "Team page not included"
+  2 files changed, 32 insertions(+)
+  create mode 100644 about.html
+  create mode 100644 home.html
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
++$ git fetch origin
++remote: Enumerating objects: 10, done.
++remote: Counting objects: 100% (10/10), done.
++remote: Compressing objects: 100% (9/9), done.
++remote: Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
++Unpacking objects: 100% (9/9), 3.20 KiB | 25.00 KiB/s, done.
++From https://github.com/UmutesiMMA/The-gym-git-exercise-solutions
++   d1e51b8..42f1a9b  main       -> origin/main
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
++$ git push origin main
++To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
++ ! [rejected]        main -> main (non-fast-forward)
++error: failed to push some refs to 'https://github.com/UmutesiMMA/The-gym-git-exerc
+ise-solutions.git'
++hint: Updates were rejected because the tip of your current branch is behind
++hint: its remote counterpart. Integrate the remote changes (e.g.
++hint: 'git pull ...') before pushing again.
++hint: See the 'Note about fast-forwards' in 'git push --help' for details.
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
++$ git pull
++Merge made by the 'ort' strategy.
++ README.md | 212 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ 1 file changed, 212 insertions(+)
++ create mode 100644 README.md
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
++$ git push origin main
++Enumerating objects: 8, done.
++Counting objects: 100% (8/8), done.
++Delta compression using up to 4 threads
++Compressing objects: 100% (6/6), done.
++Writing objects: 100% (6/6), 1.04 KiB | 266.00 KiB/s, done.
++Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
++remote: Resolving deltas: 100% (2/2), completed with 1 local object.
++To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
++   42f1a9b..d63f8d9  main -> main
+
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
++$
++```
++## Bundle 2
++### Exercise 1
++```bash
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (main)
++$ git switch -c ft/bundle-2
++Switched to a new branch 'ft/bundle-2'
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
++$ touch service.html
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
++$ git add service.html
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
++$ git commit -m "Service page"
++[ft/bundle-2 fac79a3] Service page
++ 1 file changed, 18 insertions(+)
++ create mode 100644 service.html
++
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
++$ git push origin ft/bundle-2
++Enumerating objects: 19, done.
++Counting objects: 100% (19/19), done.
++Delta compression using up to 4 threads
++Compressing objects: 100% (18/18), done.
++Writing objects: 100% (18/18), 4.53 KiB | 356.00 KiB/s, done.
++Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
++remote: Resolving deltas: 100% (9/9), completed with 1 local object.
++remote:
++remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
++remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/
+f
++t/bundle-2
++remote:
++To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
++ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
++user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
++$
+ ```
+diff --git a/service.html b/service.html
+index 89fdab2..59a54fe 100644
+--- a/service.html
++++ b/service.html
+@@ -8,13 +8,12 @@
+ </head>
+ <body>
+
+-    <di> Services we provide</di>
++    <di> Services that our company provides include:</di>
+     <ul><li>Sell</li>
+         <li>Repair</li>
+         <li>Make from scratch</li>
++        <li> Buy </li>
+
+     </ul>
+-    <div>Coupons:</div>
+-    <div>How to access out services</div>
+ </body>
+ </html>
+\ No newline at end of file
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
+$
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign|MERGING)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign|MERGING)
+$ git commit -m "Merging main with ft/service-redesign"
+[ft/service-redesign bf35848] Merging main with ft/service-redesign
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 233 bytes | 116.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+   dff22e4..bf35848  ft/service-redesign -> ft/service-redesign
+```
