@@ -288,10 +288,9 @@ To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
 $
 ```
+
 ### Exercise 2
 ```bash
-
-b2/e2
 
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (main)
 $ git checkout -b ft/service-redesign
@@ -431,10 +430,11 @@ ise-solutions.git'
 
 +user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
 +$
-+```
-+## Bundle 2
-+### Exercise 1
-+```bash
++
+```
+## Bundle 2
+### Exercise 1
+```bash
 +user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (main)
 +$ git switch -c ft/bundle-2
 +Switched to a new branch 'ft/bundle-2'
@@ -471,7 +471,6 @@ f
 
 +user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/project (ft/bundle-2)
 +$
- ```
 diff --git a/service.html b/service.html
 index 89fdab2..59a54fe 100644
 --- a/service.html
@@ -495,9 +494,6 @@ index 89fdab2..59a54fe 100644
 \ No newline at end of file
 
 user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
-$
-
-user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/service-redesign)
 $ git merge main
 Auto-merging service.html
 CONFLICT (add/add): Merge conflict in service.html
@@ -519,3 +515,84 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
    dff22e4..bf35848  ft/service-redesign -> ft/service-redesign
 ```
+### Bundle3
+## Exercise 2
+```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/faq-page)
+$ git checkout -b ft/home-redesign
+Switched to a new branch 'ft/home-redesign'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git commit -m "changes to home page"
+[main 7b6219d] changes to home page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 402 bytes | 201.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+   1bc787e..7b6219d  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git switch ft/home-redesign
+Switched to branch 'ft/home-redesign'
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-redesign.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git add home.html
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git commit -m "nav bar on home page"
+[ft/home-redesign fed2d79] nav bar on home page
+ 1 file changed, 8 insertions(+)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git push origin ft/home-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.45 KiB | 370.00 KiB/s, done.
+Total 12 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-redesign' on GitHub by visiting:
+remote:      https://github.com/UmutesiMMA/The-gym-git-exercise-solutions/pull/new/f
+t/home-redesign
+remote:
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ * [new branch]      ft/home-redesign -> ft/home-redesign
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$
+```
+### Bundle4
+## Exercise 1
+```bash
+
+```
+
+## Exercise 2
+```bash
+
+
+```
+
+
