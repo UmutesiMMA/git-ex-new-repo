@@ -586,6 +586,82 @@ $
 ### Bundle4
 ## Exercise 1
 ```bash
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (ft/home-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git remote add git-copy https://github.com/UmutesiMMA/git-ex-new-repo.git
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git remote
+git-copy
+origin
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git add .
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git commit -m "slogan on home page"
+[main c4b8190] slogan on home page
+ 1 file changed, 2 insertions(+)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push origin main
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/UmutesiMMA/The-gym-git-exerci
+se-solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.15 KiB | 98.00 KiB/s, done.
+From https://github.com/UmutesiMMA/The-gym-git-exercise-solutions
+   7b6219d..fe5888c  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 97 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 87 insertions(+), 10 deletions(-)
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 638 bytes | 319.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/UmutesiMMA/The-gym-git-exercise-solutions.git
+   fe5888c..b6a7060  main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push origin main
+Everything up-to-date
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$ git push git-copy
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (48/48), done.
+Writing objects: 100% (49/49), 5.01 MiB | 752.00 KiB/s, done.
+Total 49 (delta 24), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (24/24), done.
+To https://github.com/UmutesiMMA/git-ex-new-repo.git
+ * [new branch]      main -> main
+
+user@DESKTOP-TQVNUUS MINGW64 ~/Documents/TheGym/Project (main)
+$
 
 ```
 
